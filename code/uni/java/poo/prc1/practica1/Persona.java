@@ -10,7 +10,7 @@ public class Persona{
   private String  telefono;
   private String  apellido;
   private int     edad;
-  private boolean sexo;
+  private char    sexo;
   private String  dni;
   private String  email;
   /*Constructores*/
@@ -29,15 +29,15 @@ public class Persona{
     this(nombre, telefono, apellido);
     this.edad = edad;
   }
-  public Persona(String nombre, String telefono, String apellido, int edad, boolean sexo){
+  public Persona(String nombre, String telefono, String apellido, int edad, char sexo){
     this(nombre, telefono, apellido, edad);
     this.sexo = sexo;
   }
-  public Persona(String nombre, String telefono, String apellido, int edad, boolean sexo, String dni){
+  public Persona(String nombre, String telefono, String apellido, int edad, char sexo, String dni){
     this(nombre, telefono, apellido, edad, sexo);
     this.dni = dni;
   }
-  public Persona(String nombre, String telefono, String apellido, int edad, boolean sexo, String dni, String email){
+  public Persona(String nombre, String telefono, String apellido, int edad, char sexo, String dni, String email){
     this(nombre, telefono, apellido, edad, sexo, dni);
     this.email = email;
   }
@@ -70,10 +70,10 @@ public class Persona{
     this.edad = edad;
   }
 
-  public boolean getSexo(){
+  public char getSexo(){
     return sexo;
   }
-  public void setSexo(boolean sexo){
+  public void setSexo(char sexo){
     this.sexo = sexo;
   }
 
@@ -90,9 +90,6 @@ public class Persona{
   public void setEmail(String email){
     this.email = email;
   }
-  // public void equals(boolean equals){
-  //   return equals.getNombre() == nombre;
-  // }
   public String toString(){
     return "" + nombre + " " + telefono + " " + edad + " " + sexo + " " + dni + " " + email;
   }
